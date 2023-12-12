@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Plotter</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1>Plate detection</h1>
+  <h2>Latest Data</h2>
+  <p id="totalDisplay">Loading...</p>
+  <p id="dishLeftDisplay">Loading...</p>
+  <h2>Graph</h2>
+  <form id="queryForm">
+    <label for="param1">Begin Date:</label>
+    <input type="text" id="param1" name="param1" value="20231210T000000">
+
+    <label for="param2">End Date:</label>
+    <input type="text" id="param2" name="param2" value="20231220T000000">
+
+    <button type="button" onclick="updateValues()">Update Values</button>
+  </form>
+  <canvas id="dataChart" width="400" height="200"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
