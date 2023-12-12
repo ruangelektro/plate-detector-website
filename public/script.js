@@ -24,7 +24,7 @@ function updateValues() {
 
   const param1 = document.getElementById("param1").value;
   const param2 = document.getElementById("param2").value;
-  const apiUrl = "http://localhost:3000/api/data?bgn=" + param1 + "&end=" + param2;
+  const apiUrl = "http://localhost:8080/api/data?bgn=" + param1 + "&end=" + param2;
 
   fetch(apiUrl)
     .then(response => {
