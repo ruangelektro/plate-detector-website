@@ -26,7 +26,10 @@ function updateValues() {
   const param2 = document.getElementById("param2").value;
   const apiUrl = "http://localhost:8080/api/data?bgn=" + param1 + "&end=" + param2;
 
-  fetch(apiUrl)
+  fetch(apiUrl, {
+      method: 'GET',
+      mode: 'no-cors' }
+    )
     .then(response => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
